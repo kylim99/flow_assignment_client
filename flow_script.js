@@ -61,8 +61,9 @@ function getDefaultValues() {
 }
 function fetchAddTag(tagValue) {
   $.ajax({
-    url: "http://3.34.230.82:8080/extension-update/" + tagValue,
+    url: "http://3.34.230.82:8080/extension-update",
     type: "POST",
+    data: {extensionName : tagValue},
     contentType: "application/json",
     success: function (data) {
       tags.push(tagValue);
