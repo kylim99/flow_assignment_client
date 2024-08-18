@@ -91,7 +91,7 @@ function addTag() {
       alert("확장자가 이미 존재합니다")
       return;
     }
-    if(tags.length >= maxTags){
+    if(tags.length < maxTags){
       alert("확장자는 최대 200개 까지 추가 가능합니다")
       return;
     }
